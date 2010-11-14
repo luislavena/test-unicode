@@ -6,13 +6,16 @@ puts "Encoding.default_external: #{Encoding.default_external}"
 line = "Ésta es una línea"
 encoded = line.encode(Encoding.default_external)
 
-puts "length: #{line.length}"
-puts "encoded length: #{encoded.length}"
-puts "bytes: #{line.bytes.to_a.length}"
-puts "encoded bytes: #{encoded.bytes.to_a.length}"
+puts "line.size: #{line.size}"
+puts "encoded.size: #{encoded.size}"
+puts "line.bytesize: #{line.bytesize}"
+puts "encoded.bytesize: #{encoded.bytesize}"
 
 puts line
 puts encoded
 
 print line, "\n"
 print encoded, "\n"
+
+line.chars.each { |c| print c }; print "\n"
+encoded.chars.each { |c| print c }; print "\n"
